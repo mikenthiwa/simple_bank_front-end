@@ -1,9 +1,12 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import {useRouter} from "next/router";
+import {BaseLayout} from "../components/base-layout/base-layout.component";
 
 export default function Home() {
+  const router = useRouter();
   return (
-    <div>Next.JS</div>
+    <BaseLayout router={router} activeNav='Banking'>
+        This is the content
+    </BaseLayout>
   )
 }
+
